@@ -5,6 +5,17 @@ function App() {
   
   const [plaintext, setPlaintext] = useState("")
   const [key, setKey] = useState("")
+
+  function encrypt() {
+    console.log(plaintext)
+    console.log(key)
+  
+  }
+
+  function decrypt() {
+  
+  }
+
   return (
 
     <div className="App">
@@ -15,8 +26,8 @@ function App() {
 
       <label>Key:</label>
       <input value={key} onChange= {(event) => setKey(event.target.value)}/><br/>
-      <button onClick= {() => console.log("Encrypt button clicked")}>Encrypt</button>
-      <button onClick= {() => console.log("Decrypt button clicked")}> Decrypt</button>
+      <button onClick= {() => encrypt()}>Encrypt</button>
+      <button onClick= {() => decrypt()}> Decrypt</button>
     </div>
   )
 }
